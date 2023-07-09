@@ -383,14 +383,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
 
@@ -470,7 +470,24 @@ hexo s   # 启动预览<span aria-hidden="true" class="line-numbers-rows"><span>
 
 <p>完成后运行 <code>hexo d</code> 将网站上传部署到 GitHub Pages。</p>
 <p>这时访问域名 <code>https://用户名.github.io</code> 就可以看到 Hexo 网站了。</p>
-<h2 id="8-发布文章"><a href="#8-发布文章" class="headerlink" title="8. 发布文章"></a>8. 发布文章</h2><p>自己在source/_posts中创建 .md 文件，在文件开头手动加入如下格式 Front-matter 即可。</p>
+<h2 id="8-美化页面"><a href="#8-美化页面" class="headerlink" title="8.美化页面"></a>8.美化页面</h2><p>在这里我使用的是blinkfox主题，后期相关修改参考这个主题文档</p>
+<p><strong>文档链接：</strong><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md</a></p>
+<p>大致在下图的文件夹里面修改文件，修改完成后打开Git Bash Here，hexo g 重新生成，hexo s 开启本地预览服务,等修改的符合要求了，再输入 hexo d 推送到github仓库即可</p>
+<p><img src="C:\Users\29705\AppData\Local\Temp\1688916351518.png" alt="68891635151"></p>
+<p><strong>注意：</strong></p>
+<p>修改生成的默认页面信息，要到主题下面的_config.yml文件里面去改，而不是根目录下的_config.yml文件</p>
+<p><img src="C:\Users\29705\AppData\Local\Temp\1688916435355.png" alt="68891643535"></p>
+<p>要把根目录下的_config.yml文件中的这些信息替换成自己的和设置中文</p>
+<p><img src="C:\Users\29705\AppData\Local\Temp\1688916475620.png" alt="68891647562"></p>
+<p>配置音乐播放器：查阅文档，本网站用的是QQ音乐，</p>
+<p>配置留言功能（利用Valine）：</p>
+<ul>
+<li>评论系统放在Leancloud上的，首先需要去注册一个账号</li>
+<li>注册完以后需要创建一个应用，名字可以随便起，然后 进入应用-&gt;设置-&gt;应用key，获取你的appid 和 appkey，复制到主题下面的 _config.yml 文件里面搜索 valine，填入appid 和 appkey</li>
+<li>最后在Leancloud -&gt; 设置 -&gt; 安全中心 -&gt; Web 安全域名 把你的域名加进去</li>
+<li>主题页面显示的内容在主题下面的 layout 文件夹中的 contact.ejs 文件里面更改</li>
+</ul>
+<h2 id="9-发布文章"><a href="#9-发布文章" class="headerlink" title="9. 发布文章"></a>9. 发布文章</h2><p>自己在source/_posts中创建 .md 文件，在文件开头手动加入如下格式 Front-matter 即可。</p>
 <pre class="line-numbers language-none"><code class="language-none">---
 title: 主题介绍
 date: 2023-07-09 09:25:00
@@ -582,7 +599,7 @@ tags:
 <pre class="line-numbers language-none"><code class="language-none">hexo g   # 生成页面
 hexo d   # 部署发布<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h2 id="9-常用命令"><a href="#9-常用命令" class="headerlink" title="9. 常用命令"></a>9. 常用命令</h2><pre class="line-numbers language-none"><code class="language-none">hexo new "name"       # 新建文章
+<h2 id="10-常用命令"><a href="#10-常用命令" class="headerlink" title="10. 常用命令"></a>10. 常用命令</h2><pre class="line-numbers language-none"><code class="language-none">hexo new "name"       # 新建文章
 hexo new page "name"  # 新建页面
 hexo g                # 生成页面
 hexo d                # 部署
